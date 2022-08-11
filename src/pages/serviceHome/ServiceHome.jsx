@@ -18,6 +18,9 @@ function ServiceHome() {
   const [services,setServices]=useState(null)
   const [searchedServices,setSearchedServices]=useState([])
   const [searchSuccess,setSearchSuccess]=useState(null)
+  const [location,setlocation]=useState(null)
+  const [feePerService,setFeePerService]=useState(null)
+  const [service,setService]=useState(null)
   const handleRequest=async()=>{
 
     try{
@@ -52,17 +55,20 @@ function ServiceHome() {
   const handleOnChange=(e)=>{
     
    
-   obj[e.target.name]=e.target.value;
-  //  setFormData({obj})
   
+    // const temp={}
+    // temp[e.target.name]=e.target.value;
+    // obj={...obj,...temp}
+    // console.log('sended Search Input',obj)
    searchServices(obj)
   
   }
   
 useEffect(()=>{
     handleRequest();
+    searchServices({location,service,feePerService})
     
-  },[])
+  },[location,service,feePerService])
   return (
     <div className=''>
     <Layout>
@@ -78,17 +84,17 @@ useEffect(()=>{
         <div className="row my-4">
           <div className="col-xs-12 col-md-4">
             <div className="from-group">
-              <input type="text" className="form-control text-input"  placeholder='Service' name='service' onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input"  placeholder='Service' name='service' onChange={e=>setService(e.target.value)}/>
             </div>
           </div>
           <div className="col-xs-12 col-md-4">
             <div className="from-group">
-              <input type="text" className="form-control text-input"  placeholder='Location' name="location" onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input"  placeholder='Location' name="location"  onChange={e=>setlocation(e.target.value)}/>
             </div>
           </div>
           <div className="col-xs-12 col-md-4">
             <div className="from-group">
-              <input type="text" className="form-control text-input"  placeholder='Fee Per Serivice' name='feePerService' onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input"  placeholder='Fee Per Serivice' name='feePerService' onChange={e=>setFeePerService(e.target.value)}/>
             </div>
           </div>
         </div>

@@ -20,8 +20,9 @@ function DoctorHome() {
   const [doctors,setDoctors]=useState(null)
   const [searchedDoctor,setSearchedDoctor]=useState([])
   const [searchSuccess,setSearchSuccess]=useState(null)
-
-  
+  const [specializatioin,setSpecializatioin]=useState(null)
+  const [expirence,setExpirence]=useState(null)
+  const [feePerConsultation,setFeePerConsultation]=useState(null)
   const handleRequest=async()=>{
 
     try{
@@ -54,20 +55,20 @@ const searchDoctors=async(searchData)=>{
     setSearchSuccess(data.searchSuccess)
   }
   let obj={}
-  const handleOnChange=(e)=>{
+  // const handleOnChange=(e)=>{
     
    
-   obj[e.target.name]=e.target.value;
-  //  setFormData({obj})
+  //  obj[e.target.name]=e.target.value;
+  // //  setFormData({obj})
   
-   searchDoctors(obj)
+  //  searchDoctors(obj)
   
-  }
+  // }
   
 useEffect(()=>{
     handleRequest();
-    
-  },[])
+    searchDoctors({expirence,feePerConsultation,specializatioin})
+  },[expirence,feePerConsultation,specializatioin])
   return (
     <div className=''>
     <Layout>
@@ -83,17 +84,17 @@ useEffect(()=>{
           <div className="row align-items-center justify-content-center my-4">
           <div className="col-xs-12 col-md-4  ">
             <div className="from-group">
-              <input type="text" className="form-control text-input "  placeholder='specializatioin' name='specializatioin' onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input "  placeholder='specializatioin' name='specializatioin' onChange={e=>setSpecializatioin(e.target.value)}/>
             </div>
           </div>
           <div className="col-xs-12 col-md-4">
             <div className="from-group">
-              <input type="text" className="form-control text-input "  placeholder='Expirenence' name="expirence" onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input "  placeholder='Expirenence' name="expirence" onChange={e=>setExpirence(e.target.value)}/>
             </div>
           </div>
           <div className="col-xs-12 col-md-4">
             <div className="from-group">
-              <input type="text" className="form-control text-input"  placeholder='Fee Per Serivice' name='feePerConsultation' onChange={e=>handleOnChange(e)}/>
+              <input type="text" className="form-control text-input"  placeholder='Fee Per Serivice' name='feePerConsultation' onChange={e=>setFeePerConsultation(e.target.value)}/>
             </div>
           </div>
         </div>
