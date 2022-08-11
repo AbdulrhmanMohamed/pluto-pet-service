@@ -1,0 +1,19 @@
+.FooterH5Style{
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 500;
+}
+#FooterMainParagraph{
+    color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.FooterPetOwnerItems{
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0;
+}
+.FooterPetOwnerItems:hover{
+    color: rgb(255 154 36) !important;
+}

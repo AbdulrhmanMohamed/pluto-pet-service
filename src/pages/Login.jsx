@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { hideLoader, showLoader } from '../store/loaderSlice'
 import { loginUser } from '../store/loginSlice'
 import Loader from '../component/loader'
+import LoginImage from "../assets/petLogin.png";
+import { motion } from "framer-motion";
 function Login() {
     
 
@@ -90,10 +92,17 @@ function Login() {
                             }></i>
                             {/* <i className="fa-solid fa-eye-slash" onClick={handleShowPassword}></i> */} </div>
                     </Form.Item>
-                    <Button className='button-primary mt-2'  htmlType='submit'>Save</Button>
+                    <div className='d-flex justify-content-center'>
+                    <Button className='button-primary mt-2 w-25'  htmlType='submit'>Log in</Button>
+                    </div>
                 </Form>
-                <Link to='/register' className="link">Click Here to Register</Link>
+                <div className='d-flex justify-content-center'>
+                <Link to='/register' className="link">Click Here to<span style={{textDecoration:"underLine", paddingLeft:7}}>Register</span></Link>
             </div>
+            </div>
+            <div>
+          <img src={LoginImage} alt="register image"/>
+        </div>
         </div>
     )
 }
