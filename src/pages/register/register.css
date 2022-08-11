@@ -1,0 +1,48 @@
+.authentication{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    
+    justify-content: center;
+}
+
+.authentication-form{
+    width: 380px;
+}
+.card{
+    box-shadow: 0 0 2px gray;
+    padding:20px
+}
+
+.normal-text{
+    font-size: 1rem;
+}
+.card-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: orangered !important;
+    color: white !important;
+    max-width: fit-content;
+    padding:10px 15px;
+    border-bottom-left-radius: 10px;
+    margin:-70px;
+    
+}
+label{
+    font-size: 16px !important;
+}
+
+.ant-form-item-control-input-content .wrapper {
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 20px !important;
+    align-items: center !important;
+    border:1px solid #ccc;
+
+}
+input[id="password"]{
+    border:0 !important;
+}
+
+
+

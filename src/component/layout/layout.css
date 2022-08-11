@@ -1,0 +1,135 @@
+
+.main{
+    
+    overflow: scroll;
+    
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+  }
+  
+.layout{
+    display: flex;
+    width:100%;
+    
+}
+.sidebar{
+    box-shadow: 0 0 2px gray;
+    border-radius: 5px;
+    /* height: 100vh; */
+    background-color:var(--mainColor) ;
+    max-width: fit-content;
+    width:20%;
+    padding:20px 10px;
+    
+}
+
+
+
+.content{
+   flex: 1;
+}
+.header{
+    box-shadow: 0 0 2px gray;
+    height: 15vh;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* margin-left:20px; */
+    display: flex;
+    justify-content: space-between;
+
+  
+    
+}
+.header .header__close{
+    font-size: 1.5em;
+
+}
+
+.body{
+    box-shadow:0 0  2px gray;
+    /* height: 100vh; */
+    min-height: 100vh;
+    /* margin-bottom: 20px; */
+    border-radius: 5px;
+    /* margin-left: 20px; */
+    background: #f1f1f1;
+}
+.menu-item{
+    margin-top:25px;
+    cursor: pointer;
+    
+   
+}
+.menu-item a{
+    font-size: 18px;
+    color: rgb(255 255 255 /0.7);
+    text-decoration: none;
+    display: block;
+
+    
+}
+.menu-item i{
+    margin-right: 20px;
+    font-size: 18px;
+    color: rgb(255 255 255 /0.7);
+   
+
+}
+
+.active-menu-item{
+    background-color: rgba(76, 42, 4, 0.773) ;
+    
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    margin:10px -10px;
+}
+
+
+
+@media (max-width:768px){
+    .sidebar{
+        padding: 20px 10px;
+       
+        
+    }
+    .menu-item .sidebar__collapse{
+        display: none !important;
+    }
+    .sidebar__item-name{
+        display:none !important;
+    }
+    .sidebar__item-icon{
+        font-size: 30px !important;
+    }
+
+    .active-menu-item{
+        display: flex;
+        justify-content: center;
+    }
+    .menu-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .menu-item i{
+
+        display: block;
+        margin: auto;
+    }
+
+    .sidebar-title h2{
+        font-size: 16px;
+        max-width: 60px;
+    }
+
+    .hide-small{
+        display: none;
+    }
+
+}
