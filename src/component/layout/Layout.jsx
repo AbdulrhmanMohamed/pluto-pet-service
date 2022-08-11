@@ -5,6 +5,7 @@ import { logOut } from '../../store/loginSlice';
 import { userInfoById } from '../../store/userSlice';
 import Loader from '../loader';
 import {Badge} from 'antd'
+import PlutoLogo from "../../assets/logo.png";
 import './layout.css'
 function Layout({children}) {
     
@@ -130,21 +131,24 @@ function Layout({children}) {
     <>
     {inofLoading?<Loader/>:
      <div className='main'>
-        <div className="layout ">
-            <div className="sidebar ">
+        <div className="layout">
+            <div className="sidebar">
             <div className="sidebar-title d-flex justify-content-between align-items-center">
-            <h5 className='sidebar__item-name' style={{color:"rgb(255 255 255 /0.7)",fontSize:'16px'}}>{user?.userName}</h5>
+            <h5 className='sidebar__item-name' style={{color:"black", opacity:2 ,fontSize:'16px', fontWeight:'bold'}}>{user?.userName}</h5>
                         
                         <Badge count={user?.unSeenNotification.length} className='px-2'>
-                        <i className="fa-solid fa-bell fa-2x" style={{color:'rgb(255 255 255 /0.7)',cursor:'pointer'}} onClick={()=>{
-                            navigate('/notifications')
-                        }}></i>
+                        <img src={PlutoLogo} alt="logo" className="col-5 pe-1" onClick={()=>{navigate("/notifications")}} style={{width:45 , height:30}}/>
                         </Badge>
                         
                        
                         
                     </div>
-                    <div className="sidebar-menu ">
+                    <div className="sidebar-menu" >
+                    <div  className='menu-item d-flex align-items-center' >
+                            <span className='ri-home-line fa-2x sidebar__item-icon' style={{color:'black',fontSize:'18px'}} onClick={()=>{navigate("/")}}>
+                            <span style={{color:'black',fontSize:'18px',marginLeft:'20px'}}    className="sidebar__item-name" >Home</span>
+                            </span>
+                            </div>
                         {
                             menue && menue.map((item,index)=>{
                                 
@@ -152,17 +156,17 @@ function Layout({children}) {
                              
                                 return (
                                     <div key={index} className={`menu-item d-flex align-items-center ${isActive&& 'active-menu-item'}`} >
-                                        <Link to={ item.path}><i className={`${item.icon} sidebar__item-icon`}></i></Link> 
+                                        <Link to={ item.path}><i className={`${item.icon} sidebar__item-icon`} style={{color:"black"}}></i></Link> 
                                         {collapse &&
-                                         <Link to={item.path} className="sidebar__item-name" >{item.name}</Link>}
+                                         <Link to={item.path} className="sidebar__item-name" style={{color:"black"}}>{item.name}</Link>}
                                     </div>
                                 )
                             })
 
                         }
                             <div  className='menu-item d-flex align-items-center ' >
-                            <span className='ri-logout-circle-r-line fa-2x sidebar__item-icon' style={{color:'rgb(255 255 255 /0.7)',fontSize:'18px'}} onClick={handleLogout}>
-                            <span style={{color:'rgb(255 255 255 /0.7)',fontSize:'18px',marginLeft:'20px'}}    className="sidebar__item-name" >Logout</span>
+                            <span className='ri-logout-circle-r-line fa-2x sidebar__item-icon' style={{color:'black',fontSize:'18px'}} onClick={handleLogout}>
+                            <span style={{color:'black',fontSize:'18px',marginLeft:'20px'}}    className="sidebar__item-name" >Logout</span>
                             </span>
                             
                         </div>

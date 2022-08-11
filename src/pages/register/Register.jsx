@@ -4,6 +4,7 @@ import './register.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import {toast} from 'react-hot-toast'
+import PetRegist from "../../assets/petRegist.png";
 function Register() {
   const [showPassword,setShowPassword]=useState(false)
   const navigate=useNavigate();
@@ -44,7 +45,7 @@ function Register() {
   return (
     <div className='authentication'>
         <div className="authentication-form card">
-         <h1 className="card-title my-3">Nice To Meet You All</h1>
+         <h1 className="card-register-title my-3">Nice To Meet You All</h1>
          <Form layout='vertical' onFinish={onFinish}  onFinishFailed={onFinishFailed}>
           <Form.Item label="Name" name="userName" rules={[{ required: true, message: 'Please input your username!' },{min:3,message:"you should add more than 3"}]}>
             <Input placeholder='Enter Your Name' />
@@ -63,9 +64,16 @@ function Register() {
             {/* <i className="fa-solid fa-eye-slash" onClick={handleShowPassword}></i> */}
           </div>
           </Form.Item>  
-          <Button className='button-primary mt-2' htmlType='submit'>Save</Button>
+          <div className='d-flex justify-content-center mb-2'>
+          <Button className='button-primary mt-2 w-25' htmlType='submit'>Regist</Button>
+          </div>
          </Form>
-          <Link to='/login' className="link" style={{backgroundColor:'var(--maincolor)'}}>Click Here to Login</Link>
+         <div className='d-flex justify-content-center'>
+          <Link to='/login' className="link" style={{backgroundColor:'var(--maincolor)'}}>Click Here to <span style={{textDecoration:"underLine", paddingLeft:7}}>Log in</span></Link>
+         </div>        
+        </div>
+        <div>
+          <img src={PetRegist} alt="register image"/>
         </div>
     </div>
   )

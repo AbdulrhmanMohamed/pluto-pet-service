@@ -1,0 +1,62 @@
+#HeroCentarizedContent{
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+#HeroContent .HeroH1{
+  font-size: 6rem;
+  font-weight: 600;
+  width : 100%;
+  margin : auto;
+  display: flex;
+  justify-content: center;
+  color: var(--lightColor);
+}
+#HeroContent p{
+  font-size: 2.1rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  margin-top: 20;
+}
+@media screen and (min-width: 1179px) and (max-width:1275px){
+    #HeroContent .HeroH1{
+        font-size: 5rem;
+    }
+    #HeroContent p{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 800px) and (max-width:1180px){
+    #HeroCentarizedContent{
+        height: 50vh;
+    }
+    #HeroContent .HeroH1{
+        font-size: 3.7rem;
+    }
+    #HeroContent p{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 690px) and (max-width:799px){
+    #HeroCentarizedContent{
+        height: 35vh;
+    }
+    #HeroContent .HeroH1{
+        font-size: 2rem;
+    }
+    #HeroContent p{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 400px) and (max-width:689px){
+    #HeroCentarizedContent{
+        height: 25vh;
+    }
+    #HeroContent .HeroH1{
+        font-size: 2rem;
+    }
+    #HeroContent p{
+        font-size: 1rem;
+    }
+}

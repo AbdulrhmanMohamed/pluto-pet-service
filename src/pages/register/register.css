@@ -2,22 +2,22 @@
     height:100vh;
     display:flex;
     align-items: center;
-    
     justify-content: center;
 }
 
 .authentication-form{
-    width: 380px;
+    width: 480px;
 }
 .card{
     box-shadow: 0 0 2px gray;
+    border: 0 solid transparent;
     padding:20px
 }
 
 .normal-text{
     font-size: 1rem;
 }
-.card-title{
+.card-register-title{
     font-size: 1.5rem;
     font-weight: bold;
     background-color: orangered !important;

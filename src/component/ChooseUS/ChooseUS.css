@@ -1,0 +1,55 @@
+#ServiceSectionH3{
+    font-size: 2.7rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+#ServiceSectionParagraph{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666;
+    padding: 1.7rem;
+}
+.CardsWhyStyle h4{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.CardsWhyStyle p {
+    color: #666;
+    font-size: 1rem;
+}
+.WhyChooseUsImageStyle img {
+    width: 7rem;
+    height: 6.5rem;
+}
+@media screen and (min-width: 690px) and (max-width:799px){
+    #ServiceSectionH3{
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    #ServiceSectionParagraph{
+        font-size: 1rem;
+        padding: 1.3rem;
+    }
+    .CardsWhyStyle h4{
+        font-size: 1.1rem;
+    }
+    .CardsWhyStyle p {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (min-width: 399px) and (max-width:689px){
+    #ServiceSectionH3{
+        font-size: 1.8rem;
+        padding-bottom: .8rem;
+    }
+    #ServiceSectionParagraph{
+        font-size: 0.8rem;
+        padding: 1.2rem;
+    }
+    .CardsWhyStyle h4{
+        font-size: 1.1rem;
+    }
+    .CardsWhyStyle p {
+        font-size: 0.9rem;
+    }
+}

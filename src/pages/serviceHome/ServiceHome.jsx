@@ -110,7 +110,7 @@ useEffect(()=>{
   
    </Row>
      </div>:
-      <div className="allServices">
+      <div className="allServices container">
      <Row gutter={20}>
        
        {services?.length>0 && services?.map((service,index)=>{
