@@ -20,7 +20,7 @@ const Advices = () => {
                 <Card.Img variant="top" src={elem.image} style={{height:200}}/>
                 </motion.div>
                 <Card.Body>
-                <motion.div whileHover={{color : "rgb(255 154 36)"}}>
+                <motion.div whileHover={{color : "var(--mainColor)"}}>
                   <Card.Title style={{height : 50 , textAlign:'center', fontSize:21 , lineHeight:1.5 , fontWeight:600}} className="h-100">{elem.title}</Card.Title>
                   </motion.div>
                 </Card.Body>

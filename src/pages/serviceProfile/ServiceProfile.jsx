@@ -173,10 +173,10 @@ function ServiceProfile() {
                
                
             </Row>
-                <div className="d-flex justify-content-end " >
+                <div className="d-flex justify-content-end apply-submit" >
                     <Button htmlType='submit' style={{
                         background:'var(--mainColor)',
-                        color:'white',
+                        color:'black',
                         fontSize:'20px',
                         maxWidth:'fit-content',
                         height:'50px',

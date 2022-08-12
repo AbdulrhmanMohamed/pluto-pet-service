@@ -82,14 +82,7 @@ function Doctor() {
                    
                    
                     <Col xs={24} md={8}>
-                    <Form.Item name="whatsApp" label="WhatsNumber" rules={
-                            [
-                                {
-                                    required: true,
-                                    message: "This Field is Required"
-                                }, 
-                            ]
-                    }>
+                    <Form.Item name="whatsApp" label="WhatsNumber" >
                         <Input  className="text-input" placeholder="+201201392000" />
                     </Form.Item>
                     </Col>
@@ -125,14 +118,7 @@ function Doctor() {
                     </Form.Item>
                     </Col>
                     <Col xs={24} md={8}>
-                    <Form.Item name="website" label="website" rules={
-                            [
-                                {
-                                    required: true,
-                                    message: "This Field is Required"
-                                }, 
-                            ]
-                    }>
+                    <Form.Item name="website" label="website" >
                         <Input  className="text-input" placeholder="website" />
                     </Form.Item>
                     </Col>

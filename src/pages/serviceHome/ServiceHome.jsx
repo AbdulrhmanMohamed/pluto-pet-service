@@ -107,7 +107,7 @@ useEffect(()=>{
        
        {searchedServices?.length>0 && searchedServices?.map((service,index)=>{
          return (
-           <Col key={index} span={8} xs={24} sm={24} lg={8} className='mb-3'>
+           <Col key={index} span={8} xs={24} sm={24} lg={8} md={12} className='mb-3'>
            {/* <DoctorCardComponent doctor={doctor} key={index}/> */}
            <ServiceCardComponent key={index} service={service}/>
           </Col>
@@ -121,7 +121,7 @@ useEffect(()=>{
        
        {services?.length>0 && services?.map((service,index)=>{
          return (
-           <Col key={index} span={8} xs={24} sm={24} lg={8} className='mb-3'>
+           <Col key={index}  xs={24}  lg={8} md={12} className='mb-3'>
            {/* <DoctorCardComponent doctor={doctor} key={index}/> */}
            <ServiceCardComponent key={index} service={service}/>
           </Col>
