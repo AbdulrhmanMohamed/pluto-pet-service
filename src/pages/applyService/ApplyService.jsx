@@ -131,7 +131,7 @@ function ApplyService() {
                                 }, 
                             ]
                     }>
-                        <Input className="text-input"  placeholder="What Type Of Service" />
+                        <Input className="text-input"  placeholder="like pet sitting" />
                     </Form.Item>
                     </Col>
                    
