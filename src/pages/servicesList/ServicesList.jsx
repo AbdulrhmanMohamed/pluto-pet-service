@@ -58,7 +58,7 @@ render:(text,record)=>{
   }
   ]
   return (
-    <Layout>
+    <Layout style={{overflow: 'hidden'}}>
        <div className="doctors-list">
 
         <h2 className='p-4'>Service List</h2>
