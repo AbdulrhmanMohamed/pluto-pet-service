@@ -14,10 +14,10 @@ function DoctorCardComponent({doctor}) {
 
         <div className="card m-3"
             style={
-                {cursor: 'pointer',border:'2px solid transparent',borderRadius:'13px',}
+                {cursor: 'pointer',border:'2px solid transparent',borderRadius:'13px',width:'25rem',}
         }>
-            <div className="" style={{background:'#FFF6E6',padding:'0px 30px',borderRadius:'6px',border:'2px solid #f1f1f1'}}>
-                <h4 style={{color:'var(--soDarkColor)'}} className="my-1"> <span style={{color:'#777'}}>Name | </span>{
+            <div className="" style={{background:'#FFF6E6',padding:'10px 0',borderRadius:'6px',border:'2px solid #f1f1f1'}}>
+                <h4 style={{color:'var(--soDarkColor)',fontSize:'22px',padding:'10px 0'}} className="my-1"> <span style={{color:'#777'}}>Name|</span>{
                     doctor.firstName
                 }&nbsp; {
                     doctor.lastName
@@ -31,7 +31,7 @@ function DoctorCardComponent({doctor}) {
                     className=''
                     alt=""
                     style={
-                        {height: '250px',width:'12rem',border:'2px solid black',borderRadius:'6px'}
+                        {height: '220px',width:'12rem',border:'2px solid black',borderRadius:'6px'}
                     }/>
 
                 <div className="content-wrapper ms-3">

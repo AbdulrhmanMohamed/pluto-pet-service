@@ -103,30 +103,30 @@ useEffect(()=>{
 
      {
       searchSuccess?<div className="searchedDoctors py-5">
-      <Row gutter={20}>
+      <div className='d-flex flex-wrap justify-content-center'>
         
         {searchedDoctor?.length>0 && searchedDoctor?.map((doctor,index)=>{
           return (
-            <Col span={8} xs={24} sm={24} lg={8} className='mb-3'>
+            <di  className='mb-3'>
             <DoctorCardComponent doctor={doctor} key={index}/>
-           </Col>
+           </di>
           )
         })}
    
-    </Row>
+    </div>
       </div>:
       <div className="allDoctors py-5" >
-     <Row gutter={20}>
+     <div className='d-flex flex-wrap justify-content-center'>
        
        {doctors?.length>0 && doctors?.map((doctor,index)=>{
          return (
-           <Col span={8} xs={24} sm={24} lg={8} className='mb-3'>
+           <div className='mb-3'>
            <DoctorCardComponent doctor={doctor} key={index}/>
-          </Col>
+          </div>
          )
        })}
   
-   </Row>
+   </div>
      </div>
      }
       </div>

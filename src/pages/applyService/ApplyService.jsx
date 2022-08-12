@@ -184,6 +184,7 @@ function ApplyService() {
                             maxWidth:'fit-content',
                             height:'50px',
                             borderRadius:'5px',
+                            border:'1px solid black'
                         }}>Submit</Button>
                     </div>
                    
