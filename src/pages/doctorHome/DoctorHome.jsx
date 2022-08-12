@@ -102,7 +102,7 @@ useEffect(()=>{
       </form>
 
      {
-      searchSuccess?<div className="searchedDoctors">
+      searchSuccess?<div className="searchedDoctors py-5">
       <Row gutter={20}>
         
         {searchedDoctor?.length>0 && searchedDoctor?.map((doctor,index)=>{
@@ -115,7 +115,7 @@ useEffect(()=>{
    
     </Row>
       </div>:
-      <div className="allDoctors">
+      <div className="allDoctors py-5">
      <Row gutter={20}>
        
        {doctors?.length>0 && doctors?.map((doctor,index)=>{

@@ -177,9 +177,9 @@ function ApplyService() {
                    
                 </Row>
                     <div className="d-flex justify-content-end " >
-                        <Button htmlType='submit' style={{
+                        <Button htmlType='submit' className='apply-submit' style={{
                             background:'var(--mainColor)',
-                            color:'white',
+                            color:'black',
                             fontSize:'20px',
                             maxWidth:'fit-content',
                             height:'50px',

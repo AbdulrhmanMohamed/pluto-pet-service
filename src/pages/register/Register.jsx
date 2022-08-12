@@ -6,7 +6,7 @@ import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import PetRegist from "../../assets/petRegist.png";
 function Register() {
-  const [showPassword,setShowPassword]=useState(false)
+  const [showPassword,setShowPassword]=useState(true)
   const navigate=useNavigate();
   const handleShowPassword=()=>{
     setShowPassword(!showPassword);
@@ -45,7 +45,7 @@ function Register() {
   return (
     <div className='authentication'>
         <div className="authentication-form card">
-         <h1 className="card-register-title my-3">Nice To Meet You All</h1>
+         {/* <h1 className="card-register-title my-3">Nice To Meet You All</h1> */}
          <Form layout='vertical' onFinish={onFinish}  onFinishFailed={onFinishFailed}>
           <Form.Item label="Name" name="userName" rules={[{ required: true, message: 'Please input your username!' },{min:3,message:"you should add more than 3"}]}>
             <Input placeholder='Enter Your Name' />
@@ -58,14 +58,14 @@ function Register() {
           <Form.Item label="Password" name="password"  rules={[{required:true,message:"Required Field is Empty"}]}>
           <div className="wrapper">
 
-            <Input placeholder='Enter Your Password'  id="password"/>
+            <Input placeholder='Enter Your Password'  id="password" type="password"/>
             
-            <i className="fa-solid fa-eye" onClick={handleShowPassword} style={{cursor:'pointer'}}></i>
+            <i className="fa-solid fa-eye-slash" onClick={handleShowPassword} style={{cursor:'pointer'}}></i>
             {/* <i className="fa-solid fa-eye-slash" onClick={handleShowPassword}></i> */}
           </div>
           </Form.Item>  
           <div className='d-flex justify-content-center mb-2'>
-          <Button className='button-primary mt-2 w-25' htmlType='submit'>Regist</Button>
+          <Button className='button-primary mt-2 w-25' htmlType='submit'>Register</Button>
           </div>
          </Form>
          <div className='d-flex justify-content-center'>

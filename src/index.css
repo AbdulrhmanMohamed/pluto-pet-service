@@ -8,7 +8,7 @@
 /* global styling */
 
 :root{
-  --mainColor:rgb(255 154 36) ;
+  --mainColor:#FFEDCC ;
   --lightColor:#f1f1f1;
   --darkColor:#666;
   --soDarkColor:rgb(64,60,60)
@@ -42,10 +42,11 @@
 .button-primary{
   width:100%;
   background-color: var(--mainColor) !important;
-  color:white !important;
-  font-size: 18px;
-  padding: 10px !important;
+  color:var(--soDarkColor) !important;
+  font-size: 18px !important;
+  /* padding: 10px !important; */
   height: 40px !important;
+  
   
 }
 
@@ -100,4 +101,9 @@ input:focus{
   color: gray;
   cursor: pointer;
   text-decoration:underline;
+}
+
+.apply-submit,.apply-submit:hover{
+  border:1px solid black !important;
+  color: black;
 }
