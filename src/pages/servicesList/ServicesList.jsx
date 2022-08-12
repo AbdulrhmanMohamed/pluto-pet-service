@@ -13,12 +13,12 @@ function ServicesList() {
   const handleApproval=(record)=>{
     
     dispatch(changeServiceStatus({actualUserId:record.userId,status:record.status}))
-    setTimeout(()=>{
+    // setTimeout(()=>{
 
         // dispatch(getAllServices('dummy'))
      dispatch(getAllServices('dummy'))
 
-    },500)
+    // },500)
   }
 
   useEffect(()=>{

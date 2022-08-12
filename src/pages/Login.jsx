@@ -55,7 +55,7 @@ function Login() {
     return (
         <div className='authentication'>
             <div className="authentication-form card">
-                <h1 className="card-title my-3">Welcome Back</h1>
+                {/* <h1 className="card-title my-3">Welcome Back</h1> */}
                 <Form layout='vertical'
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}>
@@ -83,9 +83,9 @@ function Login() {
                     }>
                         <div className="wrapper">
 
-                            <Input placeholder='Enter Your Password' id="password"/>
+                            <Input placeholder='Enter Your Password' id="password" type="password"/>
 
-                            <i className="fa-solid fa-eye"
+                            <i className="fa-solid fa-eye-slash"
                                 onClick={handleShowPassword}
                                 style={
                                     {cursor: 'pointer'}

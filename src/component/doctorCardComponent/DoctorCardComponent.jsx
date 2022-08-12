@@ -14,7 +14,7 @@ function DoctorCardComponent({doctor}) {
 
         <div className="card my-5"
             style={
-                {cursor: 'pointer',border:'2px solid transparent',borderRadius:'13px',  width:"33rem"}
+                {cursor: 'pointer',border:'2px solid transparent',borderRadius:'13px',  }
         }>
             <div className="" style={{background:'#FFF6E6',padding:'0px 30px',borderRadius:'6px',border:'2px solid #f1f1f1'}}>
                 <h4 style={{color:'var(--soDarkColor)'}} className="my-1"> <span style={{color:'#777'}}>Name | </span>{

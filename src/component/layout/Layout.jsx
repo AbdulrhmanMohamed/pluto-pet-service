@@ -132,12 +132,18 @@ function Layout({children}) {
     {inofLoading?<Loader/>:
      <div className='main'>
         <div className="layout">
-            <div className="sidebar">
-            <div className="sidebar-title d-flex justify-content-between align-items-center">
-            <h5 className='sidebar__item-name' style={{color:"black", opacity:2 ,fontSize:'16px', fontWeight:'bold'}}>{user?.userName}</h5>
+            <div className="sidebar" style={{padding:'20px'}}>
+            <div className="sidebar-title d-flex justify-content-between align-items-center" >
+
+
+                   
+                    <h5 className='sidebar__item-name' style={{color:"black", opacity:2 ,fontSize:'16px', fontWeight:'bold'}}>{user?.userName}</h5>
                         
-                        <Badge count={user?.unSeenNotification.length} className='px-2'>
-                        <img src={PlutoLogo} alt="logo" className="col-5 pe-1" onClick={()=>{navigate("/notifications")}} style={{width:45 , height:30}}/>
+
+
+
+                        <Badge count={user?.unSeenNotification.length} className='px-2' style={{}}>
+                        <img src={PlutoLogo} alt="logo" className="" onClick={()=>{navigate("/notifications")}} style={{width:45 , height:30,cursor:'pointer'}}/>
                         </Badge>
                         
                        

@@ -7,9 +7,9 @@ import { hideLoader, showLoader } from '../store/loaderSlice';
 function PrivateRoute(props) {
    const {token}=useSelector(state=>state.loginSlice);
    if(token){
-       return  <Navigate to="/"/>
+       return  props.children;
    }else{
-       return  <Navigate to="/register"/>
+       return  <Navigate to="/login"/>
    }
    
    

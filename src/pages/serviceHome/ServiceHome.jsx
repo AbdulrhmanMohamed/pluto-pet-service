@@ -102,7 +102,7 @@ useEffect(()=>{
 
      {
       searchSuccess?
-      <div className="searchedService">
+      <div className="searchedService py-5">
      <Row gutter={20}>
        
        {searchedServices?.length>0 && searchedServices?.map((service,index)=>{
@@ -116,7 +116,7 @@ useEffect(()=>{
   
    </Row>
      </div>:
-      <div className="allServices container">
+      <div className="allServices py-5">
      <Row gutter={20}>
        
        {services?.length>0 && services?.map((service,index)=>{
