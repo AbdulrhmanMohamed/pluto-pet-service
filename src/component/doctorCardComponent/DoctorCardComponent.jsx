@@ -52,7 +52,7 @@ function DoctorCardComponent({doctor}) {
                             color: 'black'
                         }
                     }>Specializtion: <span style={{color:"#777"}}>{
-                        doctor.Specilization
+                        doctor.specializatioin
                     }</span> </p>
                     <p style={
                         {
