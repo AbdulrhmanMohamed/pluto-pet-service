@@ -60,7 +60,7 @@ render:(text,record)=>{
   ]
   return (
     <Layout>
-       <div className="doctors-list">
+       <div className="doctors-list ">
 
         <h2 className='p-4'>Doctors List</h2>
         <Table columns={columns} dataSource={doctors}/>

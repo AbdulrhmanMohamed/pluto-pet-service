@@ -115,7 +115,7 @@ useEffect(()=>{
    
     </Row>
       </div>:
-      <div className="allDoctors py-5">
+      <div className="allDoctors py-5" >
      <Row gutter={20}>
        
        {doctors?.length>0 && doctors?.map((doctor,index)=>{
